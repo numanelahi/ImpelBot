@@ -1,11 +1,13 @@
 import TelegramBot from 'node-telegram-bot-api'
+import path from 'path';
 
 const TOKEN = '484935789:AAEjnuJwEMC4xDLywoQtUG6yV5x4ogEU1nA',
-       DOMAIN = 'https://leanawsnow.com';
+       DOMAIN = 'https://learnawsnow.com/bot';
 
 const bot = new TelegramBot(TOKEN, {webHook: {port: 8000, host: 'localhost'}});
-bot.setWebHook(`${DOMAIN}/bot${TOKEN}`);
+bot.setWebHook(DOMAIN+TOKEN);
 
 bot.on('message', msg => {
+       console.log('This works', JSON.stringify(msg));
        bot.sendMessage(msg.chat.id, 'Asalamualaikum');
 });
