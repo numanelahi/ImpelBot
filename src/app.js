@@ -12,7 +12,7 @@ const bot = new TelegramBot(TOKEN)
 
 bot.setWebHook(DOMAIN+TOKEN, fs.createReadStream(path.join(__dirname, '/certs/crt.pem')));
 
-app.get(`/${TOKEN}`, (req, res) => {
+app.post(`/${TOKEN}`, (req, res) => {
        console.log('Message received');
        res.sendStatus(204)
 })
