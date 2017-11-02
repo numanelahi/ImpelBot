@@ -9,5 +9,5 @@ bot.setWebHook(DOMAIN+TOKEN);
 
 bot.on('message', msg => {
        console.log('This works', JSON.stringify(msg));
-       bot.sendMessage(msg.chat.Id, 'Asalamualaikum');
+       bot.sendMessage(msg.chat.id, 'Asalamualaikum');
 });
