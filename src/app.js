@@ -8,6 +8,5 @@ const bot = new TelegramBot(TOKEN, {webHook: {port: 8000, host: 'localhost'}});
 bot.setWebHook(DOMAIN+TOKEN);
 
 bot.on('message', msg => {
-       console.log('This works', JSON.stringify(msg));
        bot.sendMessage(msg.chat.id, 'Asalamualaikum');
 });
