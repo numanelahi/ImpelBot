@@ -13,6 +13,7 @@ console.log(path.join(__dirname, '/certs/crt.pem'));
 bot.setWebHook(DOMAIN+TOKEN, fs.createReadStream(path.join(__dirname, '/certs/crt.pem')));
 
 bot.on('message', msg => {
+       console.log('This works')
        bot.sendMessage('Asalamualaikum');
 });
 
